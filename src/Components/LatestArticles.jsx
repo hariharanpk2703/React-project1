@@ -15,7 +15,9 @@ const LatestArticles = () => {
                 <div className="latestheading">
                     <div><h2>LatestArticles</h2></div>
                     <div className='border-bottoms'></div></div>
-                { // eslint-disable-next-line
+                
+                {
+                 // eslint-disable-next-line
                     Tourist.map((touristdetails, index) => {
                         if (index >= Tourist.length - 1)
                             return (
@@ -45,7 +47,10 @@ const LatestArticles = () => {
                     )
 
                 }
-                { // eslint-disable-next-line
+            
+
+                { 
+                // eslint-disable-next-line
                     Fitness.map((Fittdetails, index) => {
                         if (index >= Fitness.length - 1)
                         // eslint-disable-next-line
