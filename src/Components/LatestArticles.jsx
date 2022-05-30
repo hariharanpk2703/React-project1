@@ -48,7 +48,8 @@ const LatestArticles = () => {
                 { // eslint-disable-next-line
                     Fitness.map((Fittdetails, index) => {
                         if (index >= Fitness.length - 1)
-                            return (
+                        // eslint-disable-next-line
+                            {return (
                                 <div key={index} className='design'>
                                     <div >
                                         <Link to={`/Fitness/${Fittdetails.id}`}><img className="images" src={Fittdetails.image} alt="" /></Link>
@@ -67,7 +68,7 @@ const LatestArticles = () => {
 
                                     </div>
                                 </div>
-                            )
+                            )}
 
                     }
 
@@ -144,13 +145,13 @@ const LatestArticles = () => {
                     <div><h2>Top-Posts</h2></div>
                     <div className='toppost-border'></div>
                 </div>
-                {
+                { // eslint-disable-next-line
                     Tourist.map((tourisms, index) => {
                         if (index >= Tourist.length - 1) {
                             return (
                                 <div className='design1'>
                                     <div >
-                                        <Link to={`/Tourism/${tourisms.id}`}><img className="images1" src={tourisms.image} alt="" /></Link>
+                                        <Link to={`/Tourism/${tourisms.id}`}><img className="images1" src={tourisms.image} alt="pagedown" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -169,7 +170,7 @@ const LatestArticles = () => {
 
                     )
                 }
-                {
+                { // eslint-disable-next-line
                     Food.map((fooddetails, index) => {
                         if (index >= Tourist.length - 1) {
                             return (
@@ -195,7 +196,7 @@ const LatestArticles = () => {
                     )
                 }
 
-                {
+                { // eslint-disable-next-line
                     Bollywood.map((mvedetails, index) => {
                         if (index >= Tourist.length - 1) {
                             return (
@@ -220,7 +221,7 @@ const LatestArticles = () => {
 
                     )
                 }
-                {
+                { // eslint-disable-next-line
                     Fitness.map((Fittdetails, index) => {
                         if (index >= Fitness.length - 1) {
                             return (
@@ -245,7 +246,7 @@ const LatestArticles = () => {
 
                     )
                 }
-                {
+                { // eslint-disable-next-line
                     Technology.map((techdetails, index) => {
                         if (index >= Technology.length - 1) {
                             return (
