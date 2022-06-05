@@ -16,12 +16,13 @@ const Images = () => {
             <div className="atricle-components" >
                 <div className='article-leftcomponent' >
                     {   // eslint-disable-next-line
-                        Tourist.map((article, index) => {
+                        Tourist.map((article,index) => {
                             if (index >= Tourist.length - 1) {
+                            
                                 return (
 
-                                    <Link to={`/Tourism/${article.id}`} className='Home-css'>
-                                        <div key={index} className="back-image" style={{
+                                    <Link to={article.id} className='Home-css'>
+                                        <div className="back-image" style={{
                                             backgroundImage: `url(${article.image})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',
                                             width: "800px", height: "500px"
                                         }}><div className=""><span><h4>{article.name}</h4></span><span>{article.date}</span>
@@ -34,21 +35,21 @@ const Images = () => {
 
 
                                 )
-                            }
+                                    }
                         }
                         )
                     }
                 </div>
 
-                <div article-rightcomponent>
+                <div className='article-rightcomponent'>
                     <div >
                         <div>
                             {// eslint-disable-next-line
-                                Fitness.map((articles, index) => {
-                                    if (index >= Fitness.length - 1) {
+                                Fitness.map((articles,index) => {
+                                    if (index >= Tourist.length - 1) {
                                         return (
-                                            <Link to={`/Fitness/${articles.id}`} className='Home-css'>
-                                                <div key={index} className="back-image2" style={{
+                                            <Link to={articles.id} className='Home-css'>
+                                                <div className="back-image2" style={{
                                                     backgroundImage: `url(${articles.image})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',
                                                     width: "300px", height: "180px"
                                                 }}>
@@ -60,7 +61,7 @@ const Images = () => {
                                                 </div>
                                             </Link>
                                         )
-                                    }
+                                            }
                                 }
                                 )
 
@@ -69,11 +70,11 @@ const Images = () => {
                         <div>
                             {
                                 // eslint-disable-next-line
-                                Technology.map((article, index) => {
-                                    if (index >= Technology.length - 1) {
+                                Technology.map((article,index) => {
+                                    if (index >= Tourist.length - 1) {
                                         return (
-                                            <Link to={`/Technology/${article.id}`} className='Home-css'>
-                                                <div key={index} className="back-image3" style={{
+                                            <Link to={article.id} className='Home-css'>
+                                                <div className="back-image3" style={{
                                                     backgroundImage: `url(${article.image})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',
                                                     width: "400px", height: "280px"
                                                 }}>
@@ -97,4 +98,4 @@ const Images = () => {
     )
 }
 
-export default Images
+export default Images;

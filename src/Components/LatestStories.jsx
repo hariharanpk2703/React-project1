@@ -21,7 +21,7 @@ const LatestStories = () => {
                                 <div key={index} className="latest-fitness" >
 
                                     <div>
-                                        <Link to={`/Food/${article.id}`}><img src={article.image} style={{ height: "200px", width: "300px" }} alt="From The Article" /> </Link>
+                                        <Link to={article.id}><img src={article.image} style={{ height: "200px", width: "300px" }} alt="From The Article" /> </Link>
                                     </div>
                                     <div><h2>Food</h2></div>
                                     <div>
@@ -35,7 +35,9 @@ const LatestStories = () => {
                                 </div>
                             )
                         }
+                        return (index);
                     }
+                    
                     )
                     }
                     {  // eslint-disable-next-line
@@ -44,7 +46,7 @@ const LatestStories = () => {
                                 return (
                                     <div key={index} className='latest-fitness'>
                                         <div>
-                                            <Link to={`/Tourism/${tourdetails.id}`}><img src={tourdetails.image} style={{ height: "200px", width: "300px" }} alt="From The Article" /></Link>
+                                            <Link to={tourdetails.id}><img src={tourdetails.image} style={{ height: "200px", width: "300px" }} alt="From The Article" /></Link>
                                         </div>
                                         <div><h2>Tourism</h2></div>
                                         <div>
@@ -69,7 +71,7 @@ const LatestStories = () => {
                                 return (
                                     <div key={index} className='latest-fitness'>
                                         <div>
-                                            <Link to={`/Technology/${techdetails.id}`}><img src={techdetails.image} style={{ height: "200px", width: "300px" }} alt="From The Article" /></Link>
+                                            <Link to={techdetails.id}><img src={techdetails.image} style={{ height: "200px", width: "300px" }} alt="From The Article" /></Link>
                                         </div>
                                         <div><h2>Technology</h2></div>
                                         <div>
@@ -84,12 +86,8 @@ const LatestStories = () => {
                                 )
                             }
                         }
-
                         )
                     }
-
-
-
                 </div>
             </>
         </div>

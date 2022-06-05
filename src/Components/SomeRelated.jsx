@@ -17,7 +17,7 @@ const SomeRelated = () => {
                             Technology.filter(data => data.id === "11").map((latest) => (
                                 <>
                                     <div >
-                                        <Link to={`/Technology/${latest.id}`}><img className='try-image' src={latest.image} alt="" /> </Link>
+                                        <Link to={latest.id}><img className='try-image' src={latest.image} alt="" /> </Link>
                                     </div>
 
                                     <div>
@@ -41,7 +41,7 @@ const SomeRelated = () => {
                             Tourist.filter(data => data.id === "2").map((latest) => (
                                 <>
                                     <div >
-                                        <Link to={`/Tourism/${latest.id}`}> <img className='try-image' src={latest.image} alt="" /></Link>
+                                        <Link to={latest.id}> <img className='try-image' src={latest.image} alt="" /></Link>
                                     </div>
                                     <div>
                                         <h2>{latest.name}</h2>

@@ -2,12 +2,13 @@ import { useContext } from "react";
 import { BlogContext } from "./BlogContext";
 import { Link } from "react-router-dom";
 
-const Fitness = () => {
+const Bollywood = () => {
   const { value4 } = useContext(BlogContext)
   const [Bollywood] = value4;
   console.log("Fitness")
 
   return (
+    <>
     <div className="tourism-cont">
       <div className='main-cont'>
         <div className='top-heading'>
@@ -15,10 +16,10 @@ const Fitness = () => {
           <div className='toppost-border'></div>
         </div>
         {
-          Bollywood.map((moviedetails, index) =>
+          Bollywood.map((moviedetails) =>
             <div className='design'>
               <div >
-                <Link to={`/Bollywood/${moviedetails.id}`}><img className="images" src={moviedetails.image} alt="" /></Link>
+                <Link to={moviedetails.id}><img className="images" src={moviedetails.image} alt="" /></Link>
               </div>
               <div className='content-data'>
                 <div >
@@ -45,10 +46,10 @@ const Fitness = () => {
           <div className='toppost-border'></div>
         </div>
         {
-          Bollywood.map((moviedetails, index) =>
+          Bollywood.map((moviedetails) =>
             <div className='design1'>
               <div >
-                <Link to={`/Bollywood/${moviedetails.id}`}><img className="images1" src={moviedetails.image} alt="" /></Link>
+                <Link to={moviedetails.id}><img className="images1" src={moviedetails.image} alt="" /></Link>
               </div>
               <div className='content-data'>
                 <div >
@@ -65,6 +66,6 @@ const Fitness = () => {
         }
       </div>
     </div>
-  )
+    </>)
 }
-export default Fitness;
+export default Bollywood;

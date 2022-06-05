@@ -15,15 +15,13 @@ const LatestArticles = () => {
                 <div className="latestheading">
                     <div><h2>LatestArticles</h2></div>
                     <div className='border-bottoms'></div></div>
-                
-                {
-                 // eslint-disable-next-line
+                { // eslint-disable-next-line
                     Tourist.map((touristdetails, index) => {
-                        if (index >= Tourist.length - 1)
+                        if (index >= Tourist.length - 1){
                             return (
-                                <div key={index} className='design'>
+                                <div className='design'>
                                     <div >
-                                        <Link to={`/Tourism/${touristdetails.id}`}><img className="images" src={touristdetails.image} alt="" /></Link>
+                                        <Link to={touristdetails.id}><img className="images" src={touristdetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -39,7 +37,7 @@ const LatestArticles = () => {
 
                                     </div>
                                 </div>
-                            )
+                            )}
 
                     }
 
@@ -47,17 +45,13 @@ const LatestArticles = () => {
                     )
 
                 }
-            
-
-                { 
-                // eslint-disable-next-line
+                { // eslint-disable-next-line
                     Fitness.map((Fittdetails, index) => {
-                        if (index >= Fitness.length - 1)
-                        // eslint-disable-next-line
-                            {return (
-                                <div key={index} className='design'>
+                        if (index >= Fitness.length - 1){
+                            return (
+                                <div className='design'>
                                     <div >
-                                        <Link to={`/Fitness/${Fittdetails.id}`}><img className="images" src={Fittdetails.image} alt="" /></Link>
+                                        <Link to={Fittdetails.id}><img className="images" src={Fittdetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -84,11 +78,11 @@ const LatestArticles = () => {
 
                 { // eslint-disable-next-line
                     Technology.map((techdetails, index) => {
-                        if (index >= Technology.length - 1)
+                        if (index >= Technology.length - 1){
                             return (
-                                <div key={index} className='design'>
+                                <div className='design' key={techdetails.id}>
                                     <div >
-                                        <Link to={`/Technology/${techdetails.id}`}><img className="images" src={techdetails.image} alt="" /></Link>
+                                        <Link to={techdetails.id}><img className="images" src={techdetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -105,7 +99,7 @@ const LatestArticles = () => {
                                     </div>
                                 </div>
                             )
-
+                            }
                     }
 
 
@@ -114,11 +108,11 @@ const LatestArticles = () => {
                 }
                 { // eslint-disable-next-line
                     Food.map((fooddetails, index) => {
-                        if (index >= Food.length - 1)
+                        if (index >= Food.length - 1){
                             return (
-                                <div key={index} className='design'>
+                                <div className='design' key={fooddetails.id}>
                                     <div >
-                                        <Link to={`/Food/${fooddetails.id}`}><img className="images" src={fooddetails.image} alt="" /></Link>
+                                        <Link to={fooddetails.id}><img className="images" src={fooddetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -135,14 +129,9 @@ const LatestArticles = () => {
                                     </div>
                                 </div>
                             )
-
-                    }
-
-
+                        }}
                     )
-
                 }
-
 
             </div>
             <div className="lastest-articles-right">
@@ -150,13 +139,14 @@ const LatestArticles = () => {
                     <div><h2>Top-Posts</h2></div>
                     <div className='toppost-border'></div>
                 </div>
-                { // eslint-disable-next-line
+                {// eslint-disable-next-line
                     Tourist.map((tourisms, index) => {
+                        
                         if (index >= Tourist.length - 1) {
                             return (
-                                <div className='design1'>
+                                <div className='design1'key={tourisms.id}>
                                     <div >
-                                        <Link to={`/Tourism/${tourisms.id}`}><img className="images1" src={tourisms.image} alt="pagedown" /></Link>
+                                        <Link to={tourisms.id}><img className="images1" src={tourisms.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -170,18 +160,17 @@ const LatestArticles = () => {
                                 </div>
                             )
                         }
+                    
                     }
-
-
                     )
                 }
-                { // eslint-disable-next-line
+                {// eslint-disable-next-line
                     Food.map((fooddetails, index) => {
                         if (index >= Tourist.length - 1) {
                             return (
-                                <div className='design1'>
+                                <div className='design1' key={fooddetails.id}>
                                     <div >
-                                        <Link to={`/Food/${fooddetails.id}`}><img className="images1" src={fooddetails.image} alt="" /></Link>
+                                        <Link to={fooddetails.id}><img className="images1" src={fooddetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -195,19 +184,18 @@ const LatestArticles = () => {
                                 </div>
                             )
                         }
+                    
                     }
-
-
                     )
                 }
 
-                { // eslint-disable-next-line
+                {// eslint-disable-next-line
                     Bollywood.map((mvedetails, index) => {
                         if (index >= Tourist.length - 1) {
                             return (
-                                <div className='design1'>
+                                <div className='design1' key={mvedetails.id}>
                                     <div >
-                                        <Link to={`/Bollywood/${mvedetails.id}`}><img className="images1" src={mvedetails.image} alt="" /></Link>
+                                        <Link to={mvedetails.id}><img className="images1" src={mvedetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -221,18 +209,17 @@ const LatestArticles = () => {
                                 </div>
                             )
                         }
+                        
                     }
-
-
                     )
                 }
-                { // eslint-disable-next-line
+                {// eslint-disable-next-line
                     Fitness.map((Fittdetails, index) => {
                         if (index >= Fitness.length - 1) {
                             return (
-                                <div className='design1'>
+                                <div className='design1' key={Fittdetails.id}>
                                     <div >
-                                        <Link to={`/Fitness/${Fittdetails.id}`}><img className="images1" src={Fittdetails.image} alt="" /></Link>
+                                        <Link to={Fittdetails.id}><img className="images1" src={Fittdetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -246,18 +233,17 @@ const LatestArticles = () => {
                                 </div>
                             )
                         }
+                    
                     }
-
-
                     )
                 }
-                { // eslint-disable-next-line
+                {// eslint-disable-next-line
                     Technology.map((techdetails, index) => {
                         if (index >= Technology.length - 1) {
                             return (
                                 <div className='design1'>
                                     <div >
-                                        <Link to={`/Technology/${techdetails.id}`}><img className="images1" src={techdetails.image} alt="" /></Link>
+                                        <Link to={techdetails.id}><img className="images1" src={techdetails.image} alt="" /></Link>
                                     </div>
                                     <div className='content-data'>
                                         <div >
@@ -271,9 +257,8 @@ const LatestArticles = () => {
                                 </div>
                             )
                         }
+                        
                     }
-
-
                     )
                 }
             </div>
@@ -281,4 +266,4 @@ const LatestArticles = () => {
     )
 }
 
-export default LatestArticles
+export default LatestArticles;

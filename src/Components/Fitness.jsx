@@ -15,10 +15,10 @@ const Fitness = () => {
                     <div className='toppost-border'></div>
                 </div>
                 {
-                    Fitness.map((Fitnessdetails, index) =>
+                    Fitness.map((Fitnessdetails) =>
                         <div className='design'>
                             <div >
-                                <Link to={`/Fitness/${Fitnessdetails.id}`}><img className="images" src={Fitnessdetails.image} alt="" /></Link>
+                                <Link to={Fitnessdetails.id}><img className="images" src={Fitnessdetails.image} alt="" /></Link>
                             </div>
                             <div className='content-data'>
                                 <div >
@@ -45,10 +45,10 @@ const Fitness = () => {
                     <div className='toppost-border'></div>
                 </div>
                 {
-                    Fitness.map((Fitnessdetails, index) =>
+                    Fitness.map((Fitnessdetails) =>
                         <div className='design1'>
                             <div >
-                                <Link to={`/Fitness/${Fitnessdetails.id}`}><img className="images1" src={Fitnessdetails.image} alt="" /></Link>
+                                <Link to={Fitnessdetails.id}><img className="images1" src={Fitnessdetails.image} alt="" /></Link>
                             </div>
                             <div className='content-data'>
                                 <div >

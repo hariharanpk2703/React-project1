@@ -29,7 +29,7 @@ const Trythis = () => {
                           Bollywood.filter(data=>data.id==="15").map((latest)=>(
                               <>
                                   <div >
-                                 <Link to={`/Bollywood/${latest.id}`}><img className='try-image' src={latest.image} alt="" /> </Link>
+                                 <Link to={latest.id}><img className='try-image' src={latest.image} alt="" /> </Link>
                                   </div>
                                  
                                   <div>
@@ -53,7 +53,7 @@ const Trythis = () => {
                       Tourist.filter(data=>data.id==="3").map((latest)=>(
                          <>
                               <div >
-                             <Link to={`/Tourism/${latest.id}`}> <img className='try-image' src={latest.image} alt="" /></Link>
+                             <Link to={latest.id}> <img className='try-image' src={latest.image} alt="" /></Link>
                               </div>
                               <div>
                                   <h2>{latest.name}</h2>
@@ -75,7 +75,7 @@ const Trythis = () => {
                       Food.filter((data)=>data.id==="18").map((latest)=>(
                           <>
                               <div >
-                             <Link to={`/Bollywood/${latest.id}`}><img className='try-image' src={latest.image} alt="" /></Link>
+                             <Link to={latest.id}><img className='try-image' src={latest.image} alt="" /></Link>
                               </div>
                               <div>
                                   <h2>{latest.name}</h2>

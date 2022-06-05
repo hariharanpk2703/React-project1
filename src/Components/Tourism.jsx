@@ -15,10 +15,10 @@ const Tourism = () => {
                     <div className='toppost-border'></div>
                 </div>
                 {
-                    Tourist.map((tourisms, index) =>
+                    Tourist.map((tourisms) =>
                         <div className='design'>
                             <div >
-                                <Link to={`/Tourism/${tourisms.id}`}><img className="images" src={tourisms.image} alt="" /></Link>
+                                <Link to={tourisms.id}><img className="images" src={tourisms.image} alt="" /></Link>
                             </div>
                             <div className='content-data'>
                                 <div >
@@ -47,10 +47,10 @@ const Tourism = () => {
                     <div className='toppost-border'></div>
                 </div>
                 {
-                    Tourist.map((tourisms, index) =>
+                    Tourist.map((tourisms) =>
                         <div className='design1'>
                             <div >
-                                <Link to={`/Tourism/${tourisms.id}`}><img className="images1" src={tourisms.image} alt="" /></Link>
+                                <Link to={tourisms.id}><img className="images1" src={tourisms.image} alt="" /></Link>
                             </div>
                             <div className='content-data'>
                                 <div >
